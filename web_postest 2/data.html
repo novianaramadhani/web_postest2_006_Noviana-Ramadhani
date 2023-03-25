@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Villa</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Sunset<span>Villa</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">Tentang Kami</a>
+        <a href="fasilitas.html">Fasilitas</a>
+        <a href="login.html">Reservasi</a>
+        <a href="invoice.html">Data Customer</a>
+      </div>
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+<nav class="form">
+  <div class="sales-boxes">
+    <br>
+    <br>
+      <div class="content">
+        <div class="user-details">
+                  <!-- // Bagian form -->
+          <h1>Form Input</h1>
+          <form id="myForm">
+            <!-- nama -->
+            <div class="input-box">
+              <label>Nama:</label>
+              <input type="text" name="nama" /><br />
+            </div>
+
+      <!-- alamat -->
+      <div class="input-box">
+        <label>Alamat:</label>
+        <input type="text" name="alamat" /><br />
+      </div>
+
+      <!-- email -->
+      <div class="input-box">
+        <label>Email:</label>
+        <input type="email" name="email" /><br />
+      </div>
+
+      <div class="input-box">
+        <label for="durasi">Durasi Penginapan:</label>
+        <select id="durasi" name="durasi">
+        <option value="">--Please choose an option--</option>
+        <option value="1 week">1 Minggu</option>
+        <option value="1 month">1 bulan</option>
+        <option value="any">Lainnya</option>
+        </select>
+    </div>
+
+      
+      <!-- pilihan ceklis -->
+      <div class="input-box">
+        <label>Fasilitas:</label>
+        <input type="checkbox" name="plus[]" value="Gym" />Gym
+        <input type="checkbox" name="plus[]" value="Spa" />Spa
+        <input type="checkbox" name="plus[]" value="Bar" />Bar<br />
+      </div>
+<!-- 
+      //gambar  -->
+       <div class="input-box">
+        <span class="details">Masukkan bukti pembayaran </span>
+        <label class="button_img">
+          <input type="file" name="gambar" required="" />
+          <span class="label" data-js-label=""> </span
+        ></label>
+      </div> 
+<!-- 
+       //radio -->
+      <label>Data Anda Sudah Benar:</label>
+      <input type="radio" name="cek" value="valid" />Benar
+      <input type="radio" name="cek" value="tidak" />tidak<br />
+      
+      
+      <div class="button3">
+      <!-- <button onclick="window.location.href='simpan.js'" onclick="simpanData()">SAVE</button> -->
+      <input type="button" value="Simpan" onclick="simpanData()" />
+      <!-- <input type="button" value="Tampilkan" onclick="tampilkanData()" /> -->
+      <!-- <input type= "button" value="check" onclick="tampilkanData()" href="invoice.html"> -->
+       <button onclick="window.location.href='invoice.html'">DATA</button>
+    </div>
+    </form>
+
+    <div id="tampilData"></div>
+      </div>
+  </div>
+  </div>
+</nav>
+
+
+    </nav>
+    <section id="about" class="about">
+      <div class="row">
+        <div class="about-img">
+          <img src="img/harga.jpg" alt="Tentang kami" />
+        </div>
+        <div class="content">
+          <h3>Harga</h3>
+
+          <p>Start Rp. 5.800.000</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="about-img">
+          <img src="img/price.jpg" alt="Tentang kami" />
+        </div>
+        <div class="content">
+          <h3>Yukk!! Buruan Reservasi</h3>
+
+          <p>Nanti akan dihubungi Admin</p>
+        </div>
+      </div>
+      </section>
+  
+    <footer>
+      <div class="sosmed">
+        <a href="#"><i data-feather="instagram"></i></a>
+
+        <a href="#"><i data-feather="twitter"></i></a>
+
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">Tentang Kami</a>
+        <a href="fasilitas.html">Layanan</a>
+        <a href="pesan.html">Reservasi</a>
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">Noviana Ramadhani @2023</a></p>
+      </div>
+    </footer>
+    <script src="js/simpan.js" ></script>
+  </body>
+</html>

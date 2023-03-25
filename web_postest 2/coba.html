@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login/Register Form</title>
+	<script>
+		// Fungsi untuk mengecek apakah user telah terdaftar
+		function checkUser(username, password) {
+			var users = JSON.parse(localStorage.getItem("users"));
+			if(users != null) {
+				for(var i=0; i<users.length; i++) {
+					if(users[i].username == username && users[i].password == password) {
+						return true;
+					}
+				}
+			}
+			return false;
+		}
+
+		// Fungsi untuk menambahkan user baru ke dalam local storage
+		function addUser(username, password) {
+			var users = JSON.parse(localStorage.getItem("users"));
+			if(users == null) {
+				users = [];
+			}
+			users.push({username: username, password: password});
+			localStorage.setItem("users", JSON.stringify(users));
+		}
+
+		// Fungsi untuk melakukan login
+		function login() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+			if(checkUser(username, password)) {
+				alert("Login berhasil!");
+			} else {
+				alert("Username atau password salah!");
+			}
+		}
+
+		// Fungsi untuk melakukan registrasi
+		function register() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+			addUser(username, password);
+			alert("Registrasi berhasil!");
+		}
+	</script>
+</head>
+<body>
+	<h2>Login Form</h2>
+	<form>
+		<label for="username">Username:</label><br>
+		<input type="text" id="username" name="username"><br>
+		<label for="password">Password:</label><br>
+		<input type="password" id="password" name="password"><br><br>
+		<input type="button" value="Login" onclick="login()">
+	</form>
+
+	<h2>Register Form</h2>
+	<form>
+		<label for="username">Username:</label><br>
+		<input type="text" id="username" name="username"><br>
+		<label for="password">Password:</label><br>
+		<input type="password" id="password" name="password"><br><br>
+		<input type="button" value="Register" onclick="register()">
+	</form>
+</body>
+</html>

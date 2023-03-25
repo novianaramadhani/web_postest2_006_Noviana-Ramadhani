@@ -1,0 +1,91 @@
+/* Googlefont Poppins CDN Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+body {
+  margin-top: 75px;
+  margin-bottom: 75px;
+  text-align: center;
+  /* background-color: rgb(226, 226, 226); */
+
+  background-image: url("../img/outdoor1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.container {
+  font-family: sans-serif;
+  width: 700px;
+  background: rgb(217, 126, 193);
+  margin: auto;
+  padding: 20px 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 13px rgba(0, 0, 0, 0.2);
+}
+.jr {
+  padding-top: 15px;
+}
+
+input[type="text"],
+[type="email"],
+[type="password"] {
+  font-size: 15px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  /* text-align: center; */
+  width: 100px;
+  display: block;
+  margin: auto;
+  font-size: 15px;
+  background: #3cb317;
+  color: white;
+  border: #59d025 3px solid;
+  border-radius: 5px;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+  background-color: #cc0000;
+  border: #cc0000 3px solid;
+  transition: 0.5s;
+}
+
+.akun {
+  color: rgb(43, 43, 43);
+}
+.akun a {
+  font-style: oblique;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #fcfc2c;
+}
+.akun a:hover {
+  color: rgb(224, 0, 15);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.sub {
+  color: rgb(43, 43, 43);
+  text-align: left;
+  display: block;
+  padding: 10px 0 0 5px;
+}
+
+.booking a {
+  background-color: #808ee7;
+  text-decoration: none;
+}

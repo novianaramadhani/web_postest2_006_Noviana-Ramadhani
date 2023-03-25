@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin:0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(230, 230, 230);
+    position: relative;
+}
+body::after {
+    content: '';
+    display: block;
+    height: 50px;
+  }
+
+header{
+    background-color: rgb(16, 195, 231);
+    padding: 13px 0px 13px 50px;
+    color: white;
+}
+
+header h1{
+    display: inline;
+}
+.orang{
+    display: inline-block;
+    margin-right: 50px;
+}
+.orang p{
+    position: absolute;
+    display: inline-block;
+    /* margin-bottom: 100px; */
+    /* margin: 10px 100px 110px 10px; */
+    margin-top: 12.5px;
+    right: 110px;
+
+}
+
+nav{
+    background-color: rgb(19, 108, 131);
+    padding: 13px 0px 13px 50px; 
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 10px;
+    margin-left: -10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+nav a:hover{
+    background-color: rgb(147, 0, 0);
+    transition: 0.5s;
+}
+
+.container{
+    background-color: white;
+    padding: 30px 42px;
+    margin: 60px 180px;
+    /* text-align: justify; */
+    border-radius: 10px;
+    box-shadow: 3px 4px 10px 2px rgb(107, 107, 107);
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.down{
+    display: block;
+}
+
+.kanan{ 
+    display: inline;
+    /* margin-left: 100px; */
+}
+
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 15px 0px 40px 40px;
+    background-color: rgb(118, 118, 118);
+}

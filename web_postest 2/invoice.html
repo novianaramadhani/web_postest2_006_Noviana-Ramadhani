@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style2.css" />
+    
+    <title>invoice</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 1rem;
+        background-color: #3ec1f1;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      th, td {
+        padding: 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid #49abe8;
+      }
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+
+      <h1>Sunset Villa</h1>
+      <div class="orang">
+        <p id="nama_ni">Noviana Ramadhani</p>
+        <!-- <a href="index.html"><img src="orang.png" width="45px" /></a> -->
+      </div>
+    </header>
+    </body>
+    <nav>
+      <a href="data.html"><span>Pesan</span></a>
+      <a href="invoice.html"><span>Invoice</span></a>
+    </nav>
+    <div class="container">
+      <h1>Data Pendaftar</h1>
+
+    <div id="tampilData"></div>
+    <script>
+      
+      
+        // / Fungsi untuk menampilkan data dari session storage
+      function tampilkanData() {
+    // Mendapatkan data dari session storage
+    let data = JSON.parse(sessionStorage.getItem("data"));
+ 
+    // Membuat tabel untuk menampilkan data
+   
+    let table = ` 
+        <table>
+            <tr>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Email</th>
+                <th>Data benar</th>
+                <th>Lama Penginapan</th>
+                <th>Fasilitas Tambahan</th>
+            </tr>
+    `;
+
+    // Menambahkan baris data ke tabel
+    data.forEach((d) => {
+            table += `
+                <tr>
+                    <td>${d.nama}</td>
+                    <td>${d.alamat}</td>
+                    <td>${d.email}</td>
+                    <td>${d.cek}</td>
+                    <td>${d.durasi}</td>
+                    <td>${d.plus.join(", ")}</td>
+                </tr>
+            `;
+            });
+
+    // Menutup tabel
+    table += "</table>";
+
+    // Menampilkan tabel di halaman website
+    document.getElementById("tampilData").innerHTML = table;
+          }
+
+
+
+tampilkanData()
+
+
+    </script>
+
+  </body>
+</html>
